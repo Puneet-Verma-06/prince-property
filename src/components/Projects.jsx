@@ -19,7 +19,7 @@ const Projects = () => {
         {/* Header */}
         <div className="projects-header" data-aos="fade-up">
           <h2 className="section-title">
-            <ShinyText text="Projects" speed={5} color="#3498db" shineColor="#87ceeb" />
+            <ShinyText text="Our Delivered Projects" speed={5} color="#3498db" shineColor="#87ceeb" />
           </h2>
           <h3 className="section-subtitle">
             <ShinyText text="PRESTIGE REDEFINED: A LEGACY OF EXCEPTIONAL PROJECTS" speed={6} color="#b8860b" shineColor="#ffd700" />
@@ -32,7 +32,6 @@ const Projects = () => {
 
         {/* Existing Projects */}
         <div className="existing-projects" data-aos="fade-up" data-aos-delay="100">
-          <h4 className="subsection-title">Our Delivered Projects</h4>
           <div className="projects-grid">
             {existingProjects.map((project, index) => (
               <div 

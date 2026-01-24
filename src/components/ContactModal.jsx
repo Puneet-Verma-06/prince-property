@@ -161,7 +161,7 @@ const ContactModal = ({ isOpen, onClose }) => {
               required
             >
               <option value="">Select Project</option>
-              <option value="RERA Approved Plots - Delhi Meerut Expressway">RERA Approved Plots - Delhi Meerut Expressway</option>
+              
               <option value="Expressway Residency">Expressway Residency</option>
             </select>
           </div>

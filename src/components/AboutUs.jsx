@@ -7,7 +7,7 @@ const AboutUs = () => {
       <div className="about-container">
         <div className="about-image" data-aos="fade-up" data-aos-duration="800">
           <img 
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop" 
+            src="https://res.cloudinary.com/dl4aqbmrc/image/upload/v1769255052/dreamstime_xl_65670036.jpg_zy30je.jpg" 
             alt="Modern Building" 
           />
         </div>

@@ -8,7 +8,7 @@ const Hero = () => {
   
   const images = [
     'https://assets-news.housing.com/news/wp-content/uploads/2021/04/07143318/shutterstock_1791084818.jpg',
-    'https://oldwebsite.hiranandaniparks.com/blog/wp-content/uploads/2023/10/01_Is-buying-residential-plots-a-good-investment-in-Oragadam-Chennai.jpg',
+    'https://www.noidacommercial.com/wp-content/uploads/2022/12/about-image-low-rise.jpg',
     'https://bigproperty.in/wp-content/uploads/2023/05/aler2.jpg'
   ];
 

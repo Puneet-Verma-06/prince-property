@@ -21,7 +21,7 @@ const Footer = () => {
               Building dreams and shaping communities with over 15+ years of excellence in real estate development.
             </p>
             <div className="social-links">
-              <a href="#" className="social-link" aria-label="Facebook">
+              <a href="https://www.facebook.com/profile.php?id=61584529430117" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
                 <FaFacebookF />
               </a>
               <a href="#" className="social-link" aria-label="Twitter">
