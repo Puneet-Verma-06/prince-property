@@ -233,18 +233,6 @@
     font-size: 1rem;
   }
 }
-    padding: 1rem;
-    font-size: 1.1rem;
-  }
-
-  .navbar-link::after {
-    display: none;
-  }
-
-  .navbar-logo h2 {
-    font-size: 1.3rem;
-  }
-}
 
 @media (max-width: 480px) {
   .navbar-container {
