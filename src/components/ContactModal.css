@@ -34,6 +34,13 @@
   box-shadow: 0 25px 70px rgba(22, 160, 133, 0.3);
   border: 2px solid rgba(22, 160, 133, 0.3);
   animation: slideUp 0.3s ease;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.modal-content::-webkit-scrollbar {
+  display: none;
 }
 
 @keyframes slideUp {
