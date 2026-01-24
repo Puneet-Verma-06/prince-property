@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -39,11 +42,24 @@ const Header = () => {
 
   const handleSmoothScroll = (e, targetId) => {
     e.preventDefault();
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      closeMenu();
+    
+    // If not on home page, navigate to home first
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Wait for navigation to complete, then scroll
+      setTimeout(() => {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    } else {
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
+    closeMenu();
   };
 
   return (
@@ -77,10 +93,16 @@ const Header = () => {
             <li className="navbar-item">
               <a href="#contact" className="navbar-link" onClick={(e) => handleSmoothScroll(e, '#contact')}>Contact Us</a>
             </li>
+            <button 
+              className="site-visit-btn mobile-site-visit"
+              onClick={(e) => handleSmoothScroll(e, '#contact')}
+            >
+              Book a Site Visit
+            </button>
           </ul>
 
           <button 
-            className="site-visit-btn"
+            className="site-visit-btn desktop-site-visit"
             onClick={(e) => handleSmoothScroll(e, '#contact')}
           >
             Book a Site Visit

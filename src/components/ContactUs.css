@@ -31,7 +31,7 @@
   background: white;
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(22, 160, 133, 0.15);
 }
 
 .section-title {
@@ -207,7 +207,7 @@
 
 .info-card {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 20px;
   padding: 20px;
   background: #f7fafc;
@@ -233,6 +233,12 @@
   align-items: center;
   justify-content: center;
   color: white;
+}
+
+.info-icon svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
 }
 
 .info-content {
@@ -302,16 +308,60 @@
 }
 
 @media (max-width: 480px) {
+  .contact-us {
+    padding: 50px 12px;
+  }
+
+  .contact-main-heading {
+    font-size: 2rem;
+  }
+
+  .contact-form-section,
+  .contact-info-section {
+    padding: 25px 18px;
+  }
+
   .section-title {
     font-size: 1.5rem;
   }
 
   .info-card {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 15px;
+    padding: 18px 15px;
   }
 
   .info-icon {
-    margin: 0 auto;
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+  }
+
+  .info-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .info-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .info-content h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .info-content p,
+  .info-content a {
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+
+  .submit-btn {
+    padding: 14px 24px;
+    font-size: 1rem;
   }
 }

@@ -84,6 +84,12 @@
   color: #16a085;
   font-size: 1.1rem;
   transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
 }
 
 .social-link:hover {
@@ -97,7 +103,7 @@
 .contact-item {
   display: flex;
   gap: 15px;
-  align-items: flex-start;
+  align-items: center;
   color: rgba(255, 255, 255, 0.85);
   font-size: 0.95rem;
   line-height: 1.6;
@@ -106,8 +112,13 @@
 .contact-icon {
   color: #16a085;
   font-size: 1.2rem;
-  margin-top: 3px;
+  margin-top: 0;
   flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-item a {
@@ -204,35 +215,58 @@
 
   .footer-content {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 35px;
   }
 
   .footer-bottom {
     flex-direction: column;
     text-align: center;
-    gap: 10px;
+    gap: 12px;
   }
 
   .footer-section {
-    text-align: center;
+    text-align: left;
+  }
+
+  .footer-heading {
+    text-align: left;
   }
 
   .footer-heading::after {
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    transform: none;
+  }
+
+  .footer-description {
+    text-align: left;
   }
 
   .social-links {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .contact-item {
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     text-align: left;
+    gap: 12px;
+  }
+
+  .contact-icon {
+    margin-top: 0;
+    font-size: 1.1rem;
+    min-width: 18px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .footer-links {
+    align-items: flex-start;
   }
 
   .footer-links li a {
     padding-left: 0;
+    text-align: left;
   }
 
   .footer-links li a::before {
@@ -241,17 +275,76 @@
 }
 
 @media (max-width: 480px) {
+  .footer {
+    padding: 35px 15px 15px;
+  }
+
+  .footer-content {
+    gap: 30px;
+  }
+
   .footer-heading {
     font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .footer-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
   }
 
   .contact-item {
     font-size: 0.9rem;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .contact-icon {
+    font-size: 1rem;
+    margin-top: 0;
+    min-width: 16px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .contact-item p,
+  .contact-item a {
+    word-break: break-word;
+    line-height: 1.6;
+  }
+
+  .social-links {
+    gap: 12px;
+    flex-wrap: wrap;
   }
 
   .social-link {
-    width: 35px;
-    height: 35px;
+    width: 38px;
+    height: 38px;
     font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .social-link svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .footer-links li {
+    text-align: left;
+  }
+
+  .footer-links li a {
+    font-size: 0.9rem;
+  }
+
+  .footer-bottom {
+    padding-top: 20px;
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom-links {
+    flex-direction: column;
+    gap: 8px;
   }
 }

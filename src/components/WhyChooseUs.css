@@ -51,7 +51,7 @@
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(22, 160, 133, 0.8);
 }
 
 .section-subtitle {
@@ -59,7 +59,7 @@
   font-weight: 600;
   color: #ffffff;
   margin-top: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(22, 160, 133, 0.8);
 }
 
 .features-grid {

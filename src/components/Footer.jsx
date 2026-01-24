@@ -41,7 +41,7 @@ const Footer = () => {
             <h3 className="footer-heading">Contact Us</h3>
             <div className="contact-item">
               <FaEnvelope className="contact-icon" />
-              <a href="mailto:Hautedevelopers2@gmail.com">Hautedevelopers2@gmail.com</a>
+              <a href="mailto:Hautedevelopers2@gmail.com">support@hautedevelopers.com</a>
             </div>
             <div className="contact-item">
               <FaPhone className="contact-icon" />
