@@ -22,7 +22,7 @@ const UpcomingProjects = () => {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
   const projectDetails = [
     {
       icon: (
