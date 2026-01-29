@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hautedevelopers.com/sitemap.xml
+
+# Disallow admin or sensitive paths (if any)
+Disallow: /api/
+Disallow: /.env
