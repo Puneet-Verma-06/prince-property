@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './UpcomingProjects.css';
 import './Hero.css';
 import ContactModal from './ContactModal';
 import ContactUs from './ContactUs';
+import RegistrationBanner from './RegistrationBanner';
 
 const UpcomingProjects = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -128,7 +130,7 @@ const UpcomingProjects = () => {
   ];
 
   return (
-    <>
+    <div className="upcoming-projects-page">
       {/* Hero Section */}
       <div className="hero">
         {images.map((image, index) => (
@@ -140,15 +142,20 @@ const UpcomingProjects = () => {
         ))}
         <div className="hero-overlay">
           <div className="hero-content">
-            <h2>Upcoming Rera Approved Plots on NE-3</h2>
+            <h2>Upcoming Approved Plots on NE-3</h2>
             <h1>Expressway Residency</h1>
-            <h3>Residential Plots on Delhi-Meerut Expressway</h3>
-            <p>Upcoming rera approved plots by haute developers on Delhi-Meerut Expressway, offered with clear pricing, defined payment plans, and long-term infrastructure-led growth potential.</p>
+            <h3>Residential Plots on Delhi–Meerut Expressway</h3>
+            <p>Explore government-approved residential plots located along the Delhi–Meerut Expressway (NE-3). Developed by Haute Developers, Expressway Residency offers planned development, transparent pricing, and structured payment options—making it ideal for both homebuyers and long-term investors.</p>
             <button className="hero-btn" onClick={() => setIsContactModalOpen(true)}>
               Contact Us
             </button>
           </div>
         </div>
+      </div>
+
+      {/* Registration Banner 1 */}
+      <div className="upcoming-projects-container" style={{ marginTop: '60px' }}>
+        <RegistrationBanner />
       </div>
 
       {/* Project Details Section */}
@@ -211,6 +218,29 @@ const UpcomingProjects = () => {
       {/* Location Advantage Section */}
       <div className="location-advantage-section">
         <div className="location-advantage-container">
+          {/* Registration Timeline Section */}
+          <div className="registration-timeline">
+            <div className="timeline-card">
+              <h3 className="timeline-heading">Registration Started</h3>
+              <p className="timeline-date">29th of Jan, 2026</p>
+            </div>
+            
+            <div className="timeline-card">
+              <h3 className="timeline-heading">Application Fee</h3>
+              <p className="timeline-date">Rs. 21,000/-</p>
+            </div>
+            
+            <div className="timeline-card">
+              <h3 className="timeline-heading">Registration Closes</h3>
+              <p className="timeline-date">15th of Feb, 2026</p>
+            </div>
+            
+            <div className="timeline-card">
+              <h3 className="timeline-heading">Allotment Day</h3>
+              <p className="timeline-date">16th of Feb, 2026</p>
+            </div>
+          </div>
+
           <h1 className="section-title">LOCATION ADVANTAGE</h1>
           <h2 className="section-subtitle">Why This Location Works</h2>
           
@@ -253,6 +283,11 @@ const UpcomingProjects = () => {
             ))}
           </div>
         </div>
+      </div>
+
+      {/* Registration Banner 2 */}
+      <div className="upcoming-projects-container">
+        <RegistrationBanner />
       </div>
 
       {/* Site Plan Section */}
@@ -344,6 +379,11 @@ const UpcomingProjects = () => {
         </div>
       </section>
 
+      {/* Registration Banner 3 */}
+      <div className="upcoming-projects-container">
+        <RegistrationBanner />
+      </div>
+
       {/* Contact Us Section */}
       <ContactUs />
 
@@ -352,7 +392,7 @@ const UpcomingProjects = () => {
         isOpen={isContactModalOpen} 
         onClose={() => setIsContactModalOpen(false)} 
       />
-    </>
+    </div>
   );
 };
 

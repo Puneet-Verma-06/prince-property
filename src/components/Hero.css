@@ -90,6 +90,20 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 0 4px 15px rgba(22, 160, 133, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-25deg);
+  transition: left 0.6s ease;
 }
 
 .hero-btn:hover {
@@ -97,6 +111,11 @@
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 8px 25px rgba(22, 160, 133, 0.5);
   border-color: #1abc9c;
+  color: white;
+}
+
+.hero-btn:hover::before {
+  left: 150%;
 }
 
 @keyframes fadeInUp {

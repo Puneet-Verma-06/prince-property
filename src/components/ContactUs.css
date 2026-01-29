@@ -39,19 +39,6 @@
   font-weight: 700;
   color: #2c3e50;
   margin-bottom: 30px;
-  position: relative;
-  padding-bottom: 15px;
-}
-
-.contact-us .section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #16a085, #2ecc71);
-  border-radius: 2px;
 }
 
 /* Form Styles */
@@ -135,6 +122,20 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(22, 160, 133, 0.3);
   margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-25deg);
+  transition: left 0.6s ease;
 }
 
 .submit-btn:disabled {
@@ -146,6 +147,11 @@
 .submit-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(22, 160, 133, 0.4);
+  color: white;
+}
+
+.submit-btn:hover:not(:disabled)::before {
+  left: 150%;
 }
 
 .submit-btn:hover:disabled {

@@ -58,12 +58,13 @@ const Projects = () => {
               />
             </div>
             <div className="upcoming-info" >
-              <h5 className="upcoming-subtitle">Upcoming Rera Approved Plots on NE-3</h5>
+              <h5 className="upcoming-subtitle">Upcoming Approved Plots on NE-3</h5>
               <h3 className="upcoming-title">Expressway Residency</h3>
-              <h4 className="upcoming-location">Residential Plots on Delhi-Meerut Expressway</h4>
+              <h4 className="upcoming-location">Residential Plots on Delhi–Meerut Expressway</h4>
               <p className="upcoming-description">
-                Upcoming rera approved plots by haute developers on Delhi-Meerut Expressway, 
-                offered with clear pricing, defined payment plans, and long-term infrastructure-led growth potential.
+                Explore government-approved residential plots located along the Delhi–Meerut Expressway (NE-3). 
+                Developed by Haute Developers, Expressway Residency offers planned development, transparent pricing, 
+                and structured payment options—making it ideal for both homebuyers and long-term investors.
               </p>
               <button 
                 className="see-details-btn"

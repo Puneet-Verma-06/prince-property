@@ -110,12 +110,30 @@
   transition: all 0.3s ease;
   white-space: nowrap;
   box-shadow: 0 2px 8px rgba(22, 160, 133, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.site-visit-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(22, 160, 133, 0.3), transparent);
+  transform: skewX(-25deg);
+  transition: left 0.6s ease;
 }
 
 .site-visit-btn:hover {
   background-color: #f8f8f8;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(22, 160, 133, 0.4);
+}
+
+.site-visit-btn:hover::before {
+  left: 150%;
 }
 
 .mobile-site-visit {

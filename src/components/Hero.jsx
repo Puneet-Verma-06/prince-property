@@ -31,10 +31,10 @@ const Hero = () => {
       ))}
       <div className="hero-overlay">
         <div className="hero-content">
-          <h2>Upcoming Rera Approved Plots on NE-3</h2>
+          <h2>Upcoming Approved Plots on NE-3</h2>
           <h1>Expressway Residency</h1>
-          <h3>Residential Plots on Delhi-Meerut Expressway</h3>
-          <p>Upcoming rera approved plots by haute developers on Delhi-Meerut Expressway, offered with clear pricing, defined payment plans, and long-term infrastructure-led growth potential.</p>
+          <h3>Residential Plots on Delhi–Meerut Expressway</h3>
+          <p>Explore government-approved residential plots located along the Delhi–Meerut Expressway (NE-3). Developed by Haute Developers, Expressway Residency offers planned development, transparent pricing, and structured payment options—making it ideal for both homebuyers and long-term investors.</p>
           <button 
             className="hero-btn"
             onClick={() => navigate('/upcoming-projects')}

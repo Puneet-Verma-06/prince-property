@@ -1,0 +1,426 @@
+.registration-form-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 120px 20px 60px;
+}
+
+.registration-form-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.registration-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.registration-title {
+  font-size: 3rem;
+  color: #1a365d;
+  margin-bottom: 10px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.registration-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  border-radius: 2px;
+}
+
+.registration-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 25px;
+}
+
+.status-message {
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.status-message.success {
+  background: #dcfce7;
+  color: #166534;
+  border: 2px solid #22c55e;
+}
+
+.status-message.error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 2px solid #ef4444;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+}
+
+.form-group input.error,
+.form-group textarea.error,
+.form-group select.error {
+  border-color: #ef4444;
+}
+
+.form-group textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+.form-group select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%234a5568'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 20px;
+  padding-right: 40px;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.payment-info-box {
+  background: #fff9f5;
+  border: 2px solid #fed7aa;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 0 0 15px;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.1);
+}
+
+.payment-header {
+  text-align: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #fed7aa;
+  padding-bottom: 8px;
+}
+
+.payment-header h3 {
+  font-size: 1.1rem;
+  color: #ea580c;
+  font-weight: 600;
+  margin: 0;
+}
+
+.payment-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.payment-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: white;
+  border-radius: 6px;
+}
+
+.payment-row.registration-fee {
+  background: #dcfce7;
+  border: 1px solid #22c55e;
+  padding: 10px 12px;
+  margin-top: 8px;
+}
+
+.payment-label {
+  font-weight: 600;
+  color: #7c2d12;
+  font-size: 0.9rem;
+}
+
+.payment-value {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 0.95rem;
+  font-family: 'Courier New', monospace;
+}
+
+.payment-value-with-copy {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.copy-btn {
+  background: #22c55e;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  color: white;
+  min-width: 30px;
+}
+
+.copy-btn:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+
+.copy-btn:active {
+  transform: scale(0.95);
+}
+
+.registration-fee .payment-label,
+.registration-fee .payment-value {
+  color: #166534;
+  font-size: 1rem;
+}
+
+.fee-amount {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+}
+
+.payment-note {
+  margin-top: 8px;
+  padding: 8px;
+  background: #fef3c7;
+  border-left: 3px solid #f59e0b;
+  border-radius: 6px;
+}
+
+.payment-note p {
+  margin: 0;
+  color: #92400e;
+  font-weight: 500;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.consent-group {
+  margin-top: 15px;
+}
+
+.consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.consent-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  cursor: pointer;
+  accent-color: #22c55e;
+}
+
+.consent-label span {
+  flex: 1;
+  line-height: 1.6;
+}
+
+.consent-label a {
+  color: #22c55e;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.consent-label a:hover {
+  text-decoration: underline;
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-25deg);
+  transition: left 0.6s ease;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  color: white;
+}
+
+.submit-button:hover::before {
+  left: 150%;
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+.submit-button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.submit-button:disabled:hover {
+  background: #9ca3af;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .registration-form-page {
+    padding: 80px 15px 40px;
+  }
+
+  .registration-form-container {
+    padding: 30px 20px;
+    border-radius: 15px;
+  }
+
+  .registration-title {
+    font-size: 2rem;
+  }
+
+  .registration-title::after {
+    width: 70px;
+    height: 3px;
+  }
+
+  .registration-subtitle {
+    font-size: 1rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+
+  .submit-button {
+    font-size: 1.1rem;
+    padding: 14px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .registration-form-container {
+    padding: 25px 15px;
+  }
+
+  .registration-title {
+    font-size: 1.75rem;
+  }
+
+  .registration-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .submit-button {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
