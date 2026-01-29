@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './RegistrationForm.css';
 
 const RegistrationForm = () => {
+  const statusMessageRef = useRef(null);
   const [formData, setFormData] = useState({
     applicantName: '',
     fatherHusbandName: '',
@@ -142,8 +143,13 @@ const RegistrationForm = () => {
           consent: false
         });
         setLoading(false);
-        // Clear message after 5 seconds
-        setTimeout(() => setStatusMessage({ type: '', message: '' }), 5000);
+        // Scroll to success message
+        setTimeout(() => {
+          statusMessageRef.current?.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center' 
+          });
+        }, 100);
       })
       .catch((error) => {
         console.error('EmailJS Error:', error);
@@ -167,7 +173,7 @@ const RegistrationForm = () => {
     <div className="registration-form-page">
       <div className="registration-form-container">
         <div className="registration-header">
-          <h1 className="registration-title">Register Now</h1>
+          <h1 cref={statusMessageRef} lassName="registration-title">Register Now</h1>
           <p className="registration-subtitle">Complete the form below to register for the scheme</p>
         </div>
 
