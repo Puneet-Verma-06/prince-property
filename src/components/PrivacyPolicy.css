@@ -79,20 +79,24 @@
   line-height: 1.8;
   color: #4a5568;
   margin-bottom: 15px;
+  text-align: left;
 }
 
 .privacy-section ul {
-  margin: 15px 0 15px 30px;
+  margin: 15px 0;
   list-style-type: none;
+  text-align: left;
+  padding-left: 0;
 }
 
 .privacy-section ul li {
   position: relative;
-  padding-left: 30px;
+  padding-left: 25px;
   margin-bottom: 12px;
   color: #4a5568;
   line-height: 1.6;
   font-size: 1.05rem;
+  text-align: left;
 }
 
 .privacy-section ul li::before {
